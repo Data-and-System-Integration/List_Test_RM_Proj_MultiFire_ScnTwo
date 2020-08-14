@@ -50,13 +50,7 @@ public java.util.List<java.lang.String> getUDC() {
 	}
 
 	public void setUDC(java.lang.String input) {
-	    if(i == 0){
-	        UDC.removeAll(UDC);
-			this.UDC.add(input);
-			i = 1;
-	    }else{
-	        this.UDC.add(input);
-	    }
+	    removeOldElemetns(i, this.UDC, input);
 	}
 	
 	//public java.util.List<java.lang.String> removeAllElementsOfList(java.util.List<java.lang.String> listVal){
@@ -80,5 +74,14 @@ private java.util.List<java.lang.String> UDC1 = new ArrayList<String>();
 			UDC1.add(input);
 	}
 	
+	public void removeOldElemetns(int counter, java.util.List<java.lang.String> ll, java.lang.String input){
+	    if(i == 0){
+	        ll.removeAll(ll);
+			this.UDC.add(input);
+			i = 1;
+	    }else{
+	        this.UDC.add(input);
+	    }
+	}
 
 }
