@@ -139,12 +139,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;2&quot;</valueString>
+        <valueString>2</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;20&quot;</valueString>
+        <valueString>&quot;2000&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
