@@ -9,14 +9,15 @@ import java.util.*;
 public class combined_pojo implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
-    int i = 0 ;
+    int i = 0, j = 0;
 
     public combined_pojo() {
     }
     
+    private java.lang.String strVal;
     private java.util.List<java.lang.String> UDC = new ArrayList<String>();
     private java.util.List<java.lang.String> secondList = new ArrayList<String>();
-    
+    private java.util.List<java.lang.String> UDC1 = new ArrayList<String>();
     private java.math.BigDecimal data_ppmonth;
     
     public java.math.BigDecimal getData_ppmonth() {
@@ -26,7 +27,7 @@ public class combined_pojo implements java.io.Serializable {
 		this.data_ppmonth = data_ppmonth;
 	}
 	
-    private java.lang.String strVal;
+    
 	public java.lang.String getStrVal() {
 		return this.strVal;
 	}
@@ -63,15 +64,12 @@ public void updateList(java.util.List<java.lang.String> inpiutList){
     inpiutList.removeAll(inpiutList);
 }
 
-private java.util.List<java.lang.String> UDC1 = new ArrayList<String>();
-
-
 	public java.util.List<java.lang.String> getUDC1() {
 		return this.UDC1;
 	}
 
 	public void setUDC1(java.lang.String input) {
-			UDC1.add(input);
+			removeOldElemetns(j, UDC1, input);
 	}
 	
 	public void removeOldElemetns(int counter, java.util.List<java.lang.String> inputList, java.lang.String input){
