@@ -27,7 +27,6 @@ public class combined_pojo implements java.io.Serializable {
 		this.data_ppmonth = data_ppmonth;
 	}
 	
-    
 	public java.lang.String getStrVal() {
 		return this.strVal;
 	}
@@ -37,7 +36,7 @@ public class combined_pojo implements java.io.Serializable {
 	}
 
 
-public java.util.List<java.lang.String> getSecondList() {
+    public java.util.List<java.lang.String> getSecondList() {
 		return this.secondList;
 	}
 
@@ -46,31 +45,25 @@ public java.util.List<java.lang.String> getSecondList() {
 	}
 
 
-public java.util.List<java.lang.String> getUDC() {
+    public java.util.List<java.lang.String> getUDC() {
 		return this.UDC;
 	}
 
 	public void setUDC(java.lang.String input) {
 	    removeOldElemetns(i, UDC, input);
 	}
-	
-	//public java.util.List<java.lang.String> removeAllElementsOfList(java.util.List<java.lang.String> listVal){
-	  //  
-	  
-	   // return listVal;
-//	}
-
-public void updateList(java.util.List<java.lang.String> inpiutList){
-    inpiutList.removeAll(inpiutList);
-}
 
 	public java.util.List<java.lang.String> getUDC1() {
 		return this.UDC1;
 	}
 
 	public void setUDC1(java.lang.String input) {
-			removeOldElemetns(j, UDC1, input);
+		removeOldElemetns(j, UDC1, input);
 	}
+
+    public void updateList(java.util.List<java.lang.String> inpiutList){
+        inpiutList.removeAll(inpiutList);
+    }
 	
 	public void removeOldElemetns(int counter, java.util.List<java.lang.String> inputList, java.lang.String input){
 	    if(counter == 0){
