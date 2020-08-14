@@ -74,13 +74,13 @@ private java.util.List<java.lang.String> UDC1 = new ArrayList<String>();
 			UDC1.add(input);
 	}
 	
-	public void removeOldElemetns(int counter, java.util.List<java.lang.String> ll, java.lang.String input){
+	public void removeOldElemetns(int counter, java.util.List<java.lang.String> inputList, java.lang.String input){
 	    if(counter == 0){
-	        ll.removeAll(ll);
-			this.ll.add(input);
+	        inputList.removeAll(inputList);
+			inputList.add(input);
 			counter = 1;
 	    }else{
-	        this.ll.add(input);
+	        inputList.add(input);
 	    }
 	}
 
