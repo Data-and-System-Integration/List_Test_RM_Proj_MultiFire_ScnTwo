@@ -19,6 +19,7 @@ public class combined_pojo implements java.io.Serializable {
     private java.util.List<java.lang.String> secondList = new ArrayList<String>();
     private java.util.List<java.lang.String> UDC1 = new ArrayList<String>();
     private java.math.BigDecimal data_ppmonth;
+    private java.util.List<java.util.List<java.lang.String>> listOfLists = new java.util.ArrayList<java.util.List<java.lang.String>>();
     
     public java.math.BigDecimal getData_ppmonth() {
 		return data_ppmonth;
@@ -75,22 +76,17 @@ public class combined_pojo implements java.io.Serializable {
 	    }
 	}
 	
-	private Map<String,String> testMap = new HashMap<String,String>();
+	  public void setUDC1(java.lang.String input) {
+		  ifListContainsElement(UDC1);
+			this.UDC1.add(input);
 
-
-    public void setUDC1(java.lang.String input) {
-        int counter = 0 ;
-        testMap.put("first",counter);
-
-        if(testMap.getValue() == 0){
-	        UDC1.removeAll(UDC1);
-			UDC1.add(input);
-			counter = 1;
-			testMap.put("first",1);
-			
-	    }else{
-	        UDC1.add(input);
-	    }
+	  }
+	
+	public void ifListContainsElement(java.util.List<java.lang.String> llist) {
+		if(!listOfLists.contains(llist)){
+			llist.removeAll(llist);
+			listOfLists.add(llist);
+		}
 	}
 	
 
