@@ -9,7 +9,6 @@ import java.util.*;
 public class combined_pojo implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
-    int i = 0, j = 0;
 
     public combined_pojo() {
     }
@@ -51,32 +50,15 @@ public class combined_pojo implements java.io.Serializable {
 	}
 
 	public void setUDC(java.lang.String input) {
-	    removeOldElemetns(i, UDC, input);
+	   ifListContainsElement(UDC);
+			this.UDC.add(input);
 	}
 
 	public java.util.List<java.lang.String> getUDC1() {
 		return this.UDC1;
 	}
-
-//	public void setUDC1(java.lang.String input) {
-//		removeOldElemetns(j, UDC1, input);
-//	}
-
-    public void updateList(java.util.List<java.lang.String> inpiutList){
-        inpiutList.removeAll(inpiutList);
-    }
 	
-	public void removeOldElemetns(int counter, java.util.List<java.lang.String> inputList, java.lang.String input){
-	    if(counter == 0){
-	        inputList.removeAll(inputList);
-			inputList.add(input);
-			counter = 1;
-	    }else{
-	        inputList.add(input);
-	    }
-	}
-	
-	  public void setUDC1(java.lang.String input) {
+	 public void setUDC1(java.lang.String input) {
 		  ifListContainsElement(UDC1);
 			this.UDC1.add(input);
 
@@ -91,10 +73,20 @@ public class combined_pojo implements java.io.Serializable {
 	
 
 
-}
 
 
-
-
-
-
+/*    public void updateList(java.util.List<java.lang.String> inpiutList){
+        inpiutList.removeAll(inpiutList);
+    }
+	
+	public void removeOldElemetns(int counter, java.util.List<java.lang.String> inputList, java.lang.String input){
+	    if(counter == 0){
+	        inputList.removeAll(inputList);
+			inputList.add(input);
+			counter = 1;
+	    }else{
+	        inputList.add(input);
+	    }
+	}*/
+	
+}	 
