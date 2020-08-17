@@ -318,7 +318,7 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueString>&quot;dm&quot;</valueString>
+        <valueString>&quot;mm&quot;</valueString>
         <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
