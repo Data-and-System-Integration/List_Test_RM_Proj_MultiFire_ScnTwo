@@ -57,9 +57,9 @@ public class combined_pojo implements java.io.Serializable {
 		return this.UDC1;
 	}
 
-	public void setUDC1(java.lang.String input) {
-		removeOldElemetns(j, UDC1, input);
-	}
+//	public void setUDC1(java.lang.String input) {
+//		removeOldElemetns(j, UDC1, input);
+//	}
 
     public void updateList(java.util.List<java.lang.String> inpiutList){
         inpiutList.removeAll(inpiutList);
@@ -74,5 +74,27 @@ public class combined_pojo implements java.io.Serializable {
 	        inputList.add(input);
 	    }
 	}
+	
+	private Map<String,String> testMap = new HashMap<String,String>();
+
+int counter =0 ;
+    public void setUDC1(java.lang.String input) {
+        testMap.put("first",counter);
+        if(counter == 0){
+	        inputList.removeAll(inputList);
+			inputList.add(input);
+			counter = 1;
+	    }else{
+	        inputList.add(input);
+	    }
+		removeOldElemetns(j, UDC1, input);
+	}
+
 
 }
+
+
+
+
+
+
