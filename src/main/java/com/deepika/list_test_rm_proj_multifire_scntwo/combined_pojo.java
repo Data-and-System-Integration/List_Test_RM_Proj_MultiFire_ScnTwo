@@ -77,18 +77,22 @@ public class combined_pojo implements java.io.Serializable {
 	
 	private Map<String,String> testMap = new HashMap<String,String>();
 
-int counter =0 ;
+
     public void setUDC1(java.lang.String input) {
+        int counter = 0 ;
         testMap.put("first",counter);
-        if(counter == 0){
-	        inputList.removeAll(inputList);
-			inputList.add(input);
+
+        if(testMap.getValue() == 0){
+	        UDC1.removeAll(UDC1);
+			UDC1.add(input);
 			counter = 1;
+			testMap.put("first",1);
+			
 	    }else{
-	        inputList.add(input);
+	        UDC1.add(input);
 	    }
-		removeOldElemetns(j, UDC1, input);
 	}
+	
 
 
 }
